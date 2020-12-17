@@ -1,0 +1,5 @@
+# ignore all files and dicrectories except cpp files
+*
+!.gitignore
+!*/              # fisrst, exclude all subdirectories
+!*.cpp          # ....and include certain cpp files!
