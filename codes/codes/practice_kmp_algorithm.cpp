@@ -1,6 +1,4 @@
-/* KMP 알고리즘 정리
-	참고 사이트 : 
-*/
+/* KMP 알고리즘 정리 */
 /*
 #include <iostream>
 #include <string>
