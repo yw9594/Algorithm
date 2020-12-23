@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 
 #define UNCLEARED 0
@@ -12,7 +12,7 @@ long long int answer = 0LL;
 vector<pair<int, int>> dir(4); // dir[i] 방향일 때, 앞쪽 칸으로 이동하기 위한 offset
 
 
-void clean(vector<vector<int>> & board, int r, int c, int d) {
+void clean(vector<vector<int>>& board, int r, int c, int d) {
     // 루틴 시작
     int cnt = 0; // 방향 체크
 
@@ -84,6 +84,6 @@ int main(void) {
 
     clean(board, r, c, d);
     cout << answer;
-     
+
     return 0;
-}
+}*/
