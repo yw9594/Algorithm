@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -18,7 +18,7 @@ vector<int> f_u_graph; // find_union graph
 struct Edge {
 	int s, e;
 	long long int w;
-	bool operator<(const Edge & arg) const {
+	bool operator<(const Edge& arg) const {
 		return this->w < arg.w;
 	}
 };
@@ -41,7 +41,7 @@ bool check_cycle(Edge& c_edge) {
 		f_u_graph[pb] = f_u_graph[pa];
 
 		return false;
-	}	
+	}
 }
 
 
@@ -58,7 +58,7 @@ int main(void) {
 	for (int i = 0; i < E; i++) {
 		int n1, n2, w;
 		cin >> n1 >> n2 >> w;
-		edges.push_back({n1, n2, w});
+		edges.push_back({ n1, n2, w });
 	}
 
 
@@ -77,9 +77,9 @@ int main(void) {
 	long long int answer = 0;
 	int cnt = 0;
 	for (auto& e : edges) {
-		Edge & c_edge = e;
-		
-		if (!check_cycle(e)) { 
+		Edge& c_edge = e;
+
+		if (!check_cycle(e)) {
 			cnt++;
 			answer += c_edge.w;
 
@@ -91,4 +91,4 @@ int main(void) {
 	cout << answer << "\n";
 
 	return 0;
-}
+}*/
