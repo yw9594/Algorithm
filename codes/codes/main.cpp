@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-// 실패 
 #include <algorithm>
 #include <map>
 #include <cmath>
@@ -12,9 +11,6 @@ using namespace std;
 typedef pair<int, int> Pos;
 
 /////////////////////////////////////////////////// 공통 Header ///////////////////////////////////////////////////
-
-
-
 
 int main(void) {
 	freopen("input.txt", "r", stdin);
