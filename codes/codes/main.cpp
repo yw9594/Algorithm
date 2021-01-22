@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <map>
 #include <cmath>
-#include "show_info.h"
 
 using namespace std;
 
