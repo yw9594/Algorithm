@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -34,7 +34,7 @@ int main(void) {
 
 	cin >> N >> M;
 
-	dist = vector<long long int>(N+1, INF);
+	dist = vector<long long int>(N + 1, INF);
 	weight = vector<vector<long long int>>(N + 1, vector<long long int>(N + 1, INF));	// 가중치 배열 초기화
 	matrix = vector<vector<int>>(N + 1, vector<int>()); // 인접 리스트 초기화
 
@@ -48,7 +48,7 @@ int main(void) {
 		}
 	}
 	cin >> start >> dest; // 출발지/목적지
-	
+
 
 	// 다익스트라 수행
 	priority_queue<Elem> pq;
@@ -73,7 +73,7 @@ int main(void) {
 	}
 	//show_1d_array(dist);
 	cout << dist[dest] << "\n";
-	
+
 
 	return 0;
-}
+}*/

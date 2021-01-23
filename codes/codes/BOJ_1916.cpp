@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -11,11 +11,12 @@ using namespace std;
 typedef pair<int, int> Pos;
 
 /////////////////////////////////////////////////// 공통 Header ///////////////////////////////////////////////////
-#define INF 987654321
+#define INF 92233720368
 
 int N, M;
 int start, dest;
-vector<long long int> dist;
+long long int dist[1001];
+vector<int> pushed;
 vector<vector<long long int>> weight;
 vector<vector<int>> matrix;
 
@@ -34,46 +35,60 @@ int main(void) {
 
 	cin >> N >> M;
 
-	dist = vector<long long int>(N+1, INF);
 	weight = vector<vector<long long int>>(N + 1, vector<long long int>(N + 1, INF));	// 가중치 배열 초기화
 	matrix = vector<vector<int>>(N + 1, vector<int>()); // 인접 리스트 초기화
+
 
 	// 입력 받기
 	for (int i = 1; i <= M; i++) {
 		int s, e, w;
 		cin >> s >> e >> w;
-		if (w < weight[s][e]) {
-			weight[s][e] = w;		// 가중치 배열
-			matrix[s].push_back(e); // 인접 리스트 
-		}
+		weight[s][e] = w;		// 가중치 배열
+		matrix[s].push_back(e); // 인접 리스트 
 	}
 	cin >> start >> dest; // 출발지/목적지
-	
+
+
+
 
 	// 다익스트라 수행
-	priority_queue<Elem> pq;
-	pq.push({ start, 0 });
+	fill(dist, dist + 1001, INF);
+	dist[start] = 0;
+	pushed = vector<int>(N + 1, 0); // 경로 집합에 포함되는지 여부 체크
 
-	while (!pq.empty()) {
-		Elem cur_node = pq.top(); // 경로 집합에 포함되지 않은 노드 중, 가중합이 가장 작은 노드를 포함시킬 것이다.
-		pq.pop();
-
-		if (dist[cur_node.n] < cur_node.w) // 가고자하는 노드의 경로 가중합이 찾은 경로의 가중합보다 더 큰 경우, 연산을 수행하지 않는다. 
-			continue;
-
-		dist[cur_node.n] = cur_node.w; // 포함시킬 노드의 경로 합을 수정한다.				
+	vector<int> path_set;
+	int cur_node = start;
+	pushed[cur_node] = 1;
 
 
-		for (auto& e : matrix[cur_node.n]) {
-			long long int new_dist = dist[cur_node.n] + weight[cur_node.n][e];// 현재 노드가 경로 집합에 포함됨에 따라 추가되는 갈 수 있는 노드들의 경로 합
-			if (new_dist < dist[e]) { // 새로이 포함된 노드에서 다음 노드로 갈 경로 중 더 빠른 노드가 존재한다면 큐에 포함한다.
-				pq.push({ e, new_dist });
+	while (path_set.size() != N) {
+		// 현재 노드, 경로 집합 삽입 
+		path_set.push_back(cur_node);
+
+
+		// 경로 집합에서 갈 수 있는 노드, 경로 갱신
+		for (auto& e : matrix[cur_node]) {
+			dist[e] = (dist[e] <= weight[cur_node][e] + dist[cur_node]) ? dist[e] : weight[cur_node][e] + dist[cur_node];
+		}
+
+
+		// 현재 경로 집합에서 경로 집합에 포함되지 않은 노드 중, 가장 경로 가중치 합이 작은 노드 선택
+		cur_node = 0; // 최솟값을 찾기 위한 더미 데이터 
+		for (int i = 1; i <= N; i++) {
+			if (!pushed[i] && dist[i] < dist[cur_node]) {
+				cur_node = i;
 			}
 		}
+		pushed[cur_node] = 1;
+
+
+		for (int i = 1; i <= N; i++)
+			cout << dist[i] << " ";
+		cout << "\n";
+
 	}
-	//show_1d_array(dist);
+
 	cout << dist[dest] << "\n";
-	
 
 	return 0;
-}
+}*/
