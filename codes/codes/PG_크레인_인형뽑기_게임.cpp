@@ -13,16 +13,14 @@
 std::istream>::sync_with_stdio(false);
 cin.tie(NULL);
 */
-
+/*
 #include <iostream>
 #include <vector>
-#include <queue>
-#include <string>
 
 using namespace std;
 
 int main(void) {
-	// freopen("input.txt", "r", stdin);
+	freopen("input.txt", "r", stdin);
 
 	return 0;
-}
+}*/
