@@ -21,7 +21,6 @@ cin.tie(NULL);
 
 using namespace std;
 
-
 int main(void) {
 	// freopen("input.txt", "r", stdin);
 	
