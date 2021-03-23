@@ -1,21 +1,11 @@
 #include <iostream>
 
-#include <algorithm>
 #include <vector>
-#include <deque>
-#include <queue>
-#include <list>
-#include <map>
-#include <set>
 
 #include <string>
 #include <cstring>
-#include <sstream>   // ex) stringstream
 
-#include <cmath>    
 #include <cctype>    // ex) isdigit..
-
-#include "infos.h"
 
 using namespace std;
 
@@ -75,19 +65,9 @@ int solution(string dartResult) {
     return answer;
 }
 
-int main(void) {
-	// input
-	/*freopen("input.txt", "r", stdin);
-	std::istream>::sync_with_stdio(false);
-	cin.tie(NULL);
-	*/
-
-	showLine("start");
-	
+int main(void) {	
 	cout << solution("1S2D*3T")<<"\n";
 	cout << solution("1D2S#10S")<<"\n";
 	cout << solution("1S*2T*3S")<<"\n";
-
-	showLine("done");
 	return 0;
 }

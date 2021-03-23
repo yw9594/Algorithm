@@ -7,11 +7,11 @@ using namespace std;
 int main(void) {
 	// freopen("input.txt", "r", stdin);
 
-	// 1. ´ÜÀÏ ¹®ÀÚ °Ë»ö
+	// 1. ë‹¨ì¼ ë¬¸ì ê²€ìƒ‰
 	char c = '@';
-	cout << strchr("!@#$%", c) << "\n"; // ¾øÀ¸¸é 0, ÀÖÀ¸¸é ÁÖ¼Ò
+	cout << strchr("!@#$%", c) << "\n";
 
-	// 2. ¹®ÀÚ¿­ °Ë»ö
+	// 2. ë‹¤ì¤‘ ë¬¸ìì—´ ê²€ìƒ‰
 	string str = "abcabcabcabcabc";
 	string sub = "abc";
 	vector<int> arr;
@@ -23,8 +23,6 @@ int main(void) {
 	}
 	for (auto& i : arr) cout << i << " ";
 	cout << "\n";
-
-
 
 	return 0;
 }*/
