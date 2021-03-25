@@ -20,20 +20,20 @@ int main(void) {
 		string name;
 		float height;
 
-		// ¹®ÀÚ¿­ ¼¼ÆÃ
+		// ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½
 		ss.str(row);
 
-		// ¿¬»êÀÚ »ç¿ëÇÏ±â
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
 		while (ss >> num >> name >> height)
 			cout << num << " " << name << " " << height << "\n";
-		ss.clear(); // ±âÁ¸ÀÇ stringstreamÀ» Àç»ç¿ëÇÏ·Á¸é ¹Ýµå½Ã clear¸¦ È£Ãâ. eof bit Á¦°Å
+		ss.clear(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ stringstreamï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Ýµï¿½ï¿½ clearï¿½ï¿½ È£ï¿½ï¿½. eof bit ï¿½ï¿½ï¿½ï¿½
 
-		// eof »ç¿ëÇÏ±â(¹®ÀÚ¿­ ³¡±îÁö ÀÐ¾îµéÀÓ.
+		// eof ï¿½ï¿½ï¿½ï¿½Ï±ï¿½(ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½.
 		while (!ss.eof()) {
 			ss >> num >> name >> height;
 			cout << num << " " << name << " " << height << "\n";
 		}
-		ss.clear(); // ±âÁ¸ÀÇ stringstreamÀ» Àç»ç¿ëÇÏ·Á¸é ¹Ýµå½Ã clear¸¦ È£Ãâ. eof bit Á¦°Å
+		ss.clear(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ stringstreamï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Ýµï¿½ï¿½ clearï¿½ï¿½ È£ï¿½ï¿½. eof bit ï¿½ï¿½ï¿½ï¿½
 	}
 
 	return 0;

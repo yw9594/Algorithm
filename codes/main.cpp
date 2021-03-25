@@ -19,18 +19,17 @@
 
 using namespace std;
 
-// 프로그래머스 사용 시 전역 변수는 반드시 solution 내부에서 초기화 할 것.
+// 프로그래머스 사용 시 전역 변수는 반드시 solution 내부에서 초기화 할 것
+
 
 int main(void) {
 	// input
-	/*freopen("input.txt", "r", stdin);
-	std::istream>::sync_with_stdio(false);
-	cin.tie(NULL);
-	*/
-
+	// freopen("./input.txt", "r", stdin);
+	// std::istream::sync_with_stdio(false);
+	// cin.tie(NULL);
+	
 	showLine("start");
-	show1dArray(ans);
-
 	showLine("done");
+
 	return 0;
 }
