@@ -28,6 +28,7 @@ int main(void) {
 	// std::istream::sync_with_stdio(false);
 	// cin.tie(NULL);
 	
+	int arr[4]={0,1,2,3};
 	showLine("start");
 	showLine("done");
 

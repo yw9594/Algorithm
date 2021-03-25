@@ -15,8 +15,6 @@
 #include <cmath>    
 #include <cctype>    // ex) isdigit..
 
-#include "infos.h"
-
 using namespace std;
 
 // 프로그래머스 사용 시 전역 변수는 반드시 solution 내부에서 초기화 할 것
@@ -33,7 +31,7 @@ struct Trie{
 	Trie() { root = new Node();}
 	~Trie() {destroy(root);}
 	
-	int charToInt(char & c) {return c-'a';}
+	int charToInt(char & c) {return c-'0';}
 	bool push(string & phoneNumber){
 		int idx = 0, lim=phoneNumber.size();
 		bool ret = true;

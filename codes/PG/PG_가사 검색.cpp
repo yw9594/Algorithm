@@ -32,7 +32,7 @@ struct Node{
 struct Tree {
 	Node*root;
 	Tree(){	root = new Node();}
-	int charToInt(char & c){return c-'a';}
+	int charToInt(char & c){return c-'0';}
 	void push(string & word, int is_reverse){
 		int idx = is_reverse > 0 ? 0 : word.size()-1, 
 			lim = is_reverse > 0 ? word.size() : -1;
