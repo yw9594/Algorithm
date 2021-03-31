@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -20,21 +20,18 @@ int main(void) {
 		string name;
 		float height;
 
-		// ���ڿ� ����
 		ss.str(row);
 
-		// ������ ����ϱ�
 		while (ss >> num >> name >> height)
 			cout << num << " " << name << " " << height << "\n";
-		ss.clear(); // ������ stringstream�� �����Ϸ��� �ݵ�� clear�� ȣ��. eof bit ����
+		ss.clear(); 
 
-		// eof ����ϱ�(���ڿ� ������ �о����.
 		while (!ss.eof()) {
 			ss >> num >> name >> height;
 			cout << num << " " << name << " " << height << "\n";
 		}
-		ss.clear(); // ������ stringstream�� �����Ϸ��� �ݵ�� clear�� ȣ��. eof bit ����
+		ss.clear();
 	}
 
 	return 0;
-}*/
+}

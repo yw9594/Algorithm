@@ -4,26 +4,25 @@
 
 using namespace std;
 
-// 최소 힙
 class MyHeap {
 private:
-	int size; // 원소 개수
-	vector<int> data; // 데이터 저장 배열
+	int size; 
+	vector<int> data;
 
 public:
 	MyHeap(int data_size) {
 		this->size = 0;
-		this->data = vector<int>(data_size + 1); // N개의 원소 저장. data[0] 사용 X
+		this->data = vector<int>(data_size + 1); 
 	}
 public:
 	void push(int x) {
-		if (data.size() == size) return; // 공간 없음
+		if (data.size() == size) return;
 
-		data[++size] = x; // 데이터 삽입
+		data[++size] = x;
 
 		int cur_node = size;
 		int parent_node;
-		while (cur_node != 1) { // 자식 노드가 부모 노드보다 작다면 교환
+		while (cur_node != 1) { 
 			parent_node = cur_node / 2;
 			if (data[cur_node] < data[parent_node])
 				swap(data[cur_node], data[parent_node]);
@@ -32,9 +31,9 @@ public:
 		return;
 	}
 	void pop() {
-		if (size == 0) return; // 원소 없음
+		if (size == 0) return; 
 
-		data[1] = data[size--]; // 마지막 원소를 root로 이동
+		data[1] = data[size--];
 
 		int cur_node = 1;
 		int left_node, right_node, child_node;
@@ -42,9 +41,9 @@ public:
 			left_node = 2 * cur_node;
 			right_node = 2 * cur_node + 1;
 
-			if (left_node > size) break;													// 자식이 존재하지 않는 경우
-			else if (left_node == size) child_node = left_node;								// 끝에서 왼쪽 자식만 존재하는 경우
-			else child_node = data[left_node] < data[right_node] ? left_node : right_node;	// 양쪽 자식 모두 존재하는 경우
+			if (left_node > size) break;													
+			else if (left_node == size) child_node = left_node;								
+			else child_node = data[left_node] < data[right_node] ? left_node : right_node;
 
 			if (data[child_node] < data[cur_node])
 				swap(data[child_node], data[cur_node]);

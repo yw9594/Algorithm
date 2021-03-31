@@ -29,7 +29,7 @@ struct Node{
 struct Trie{
 	Node * root;
 	Trie() { root = new Node();}
-	~Trie() {destroy(root);}
+	~Trie() {if(root) destroy(root);}
 	
 	int charToInt(char & c) {return c-'0';}
 	bool push(string & phoneNumber){

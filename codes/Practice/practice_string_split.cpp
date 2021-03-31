@@ -1,5 +1,3 @@
-/* 라이브러리 & 메소드
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -34,4 +32,4 @@ int main(void) {
 
 
 	return 0;
-}*/
+}
