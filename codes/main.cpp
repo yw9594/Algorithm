@@ -19,7 +19,6 @@
 
 using namespace std;
 
-// 프로그래머스 사용 시 전역 변수는 반드시 solution 내부에서 초기화 할 것
 
 int main(void) {
 	// input
@@ -28,7 +27,9 @@ int main(void) {
 	// cin.tie(NULL);
 
 	showLine("start");
+
 	showLine("done");
+
 
 	return 0;
 }
