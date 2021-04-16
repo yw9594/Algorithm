@@ -21,6 +21,7 @@ using namespace std;
 
 ///////////////////////////////////////////////////////////////////////
 
+
 int main(void) {
 	// input
 	// freopen("./input.txt", "r", stdin);
