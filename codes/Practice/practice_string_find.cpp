@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <cstring>
+
 using namespace std;
 
 int main(void) {
@@ -25,4 +26,4 @@ int main(void) {
 	cout << "\n";
 
 	return 0;
-}*/
+}
