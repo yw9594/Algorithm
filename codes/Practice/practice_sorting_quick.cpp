@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <vector>
 
@@ -7,18 +7,16 @@ using namespace std;
 void quick_sorting(vector<int>& arr, int start, int end) {
 	if (start >= end) return;
 	else {
-		int p = start, i = start + 1, j = end; // pivot, low, high
+		int p = start, i = start + 1, j = end;
 		while (1) {
-			// unstable,  low or high ¾î´À ÂÊÀÌ´ø..
-			while (i <= end && arr[i] < arr[p]) // pivotº¸´Ù Å« Á¶°ÇÀÏ ¶§±îÁö low Áõ°¡
-				i++;
-			while (j >= start + 1 && arr[j] >= arr[p]) j--;  // pivotº¸´Ù ÀÛÀº °ªÀÌ ¶§±îÁö °¨¼Ò
-
+			while (i <= end && arr[i] < arr[p]) i++;
+			while (j >= start + 1 && arr[j] >= arr[p]) j--; 
+			
 			if (i > j) {
 				int mid = j;
-				swap(arr[p], arr[j]); // pivot°ú high ±³È¯
-				quick_sorting(arr, start, mid - 1); // ÁÂ¹è¿­ Á¤·Ä, mid-1ÀÌ 0º¸´Ù ÀÛ¾ÆÁú ¼ö ÀÖ´Ù.(¿À¸§Â÷¼ø ±âÁØ, ÀÌ¹Ì Á¤·ÄÀÌ µÇ¾îÀÖ´Â °æ¿ì)
-				quick_sorting(arr, mid + 1, end); // ¿ì¹è¿­ Á¤·Ä, mid+1ÀÌ endº¸´Ù Ä¿Áú¼ö ÀÖ´Ù.(³»¸²Â÷¼ø ±âÁØ, ÀÌ¹Ì Á¤·ÄÀÌ µÇ¾îÀÖ´Â ±âÁØ)
+				swap(arr[p], arr[j]); // pivotï¿½ï¿½ high ï¿½ï¿½È¯
+				quick_sorting(arr, start, mid - 1); // ï¿½Â¹è¿­ ï¿½ï¿½ï¿½ï¿½, mid-1ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½)
+				quick_sorting(arr, mid + 1, end); // ï¿½ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½, mid+1ï¿½ï¿½ endï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½.(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½)
 				break;
 			}
 			else
@@ -47,4 +45,4 @@ int main(void) {
 		cout << arr[i] << "\n";
 
 	return 0;
-}*/
+}

@@ -1,7 +1,6 @@
-/*#include <iostream>
+#include <iostream>
 #include <vector>
 #include <algorithm>
-#include "sort_header.h"
 
 using namespace std;
 
@@ -9,7 +8,7 @@ void merge(vector<int>& arr, int start, int mid, int end) {
 	vector<int> sorted;
 	int i = start, j = mid + 1;
 
-	while (i <= mid && j <= end) { // ½Ç¼ö
+	while (i <= mid && j <= end) { // ï¿½Ç¼ï¿½
 		if (arr[i] <= arr[j]) sorted.push_back(arr[i++]);
 		else sorted.push_back(arr[j++]);
 	}
@@ -46,12 +45,7 @@ int main(void) {
 	vector<int> arr(N);
 	for (int i = 0; i < N; i++) cin >> arr[i];
 	
-	show_array(arr);
-
 	merge_sorting(arr, 0, arr.size()-1);
 
-	show_array(arr);
-
-	
 	return 0;
-}*/
+}

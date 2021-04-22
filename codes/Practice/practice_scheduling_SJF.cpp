@@ -56,7 +56,6 @@ int solution(vector<vector<int>> jobs) {
 		else if(!pq.empty()) continue;
 		// idle한 경우 이후 가장 먼저 도착한 작업을 넣는다. 
 		else pq.push(tasks[idx++]);
-
 	}
 
 	return answer / tasks.size();

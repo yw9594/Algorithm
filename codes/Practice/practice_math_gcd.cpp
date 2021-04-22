@@ -1,10 +1,9 @@
-/*#include <iostream>
+#include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
 #include <map>
 #include <cmath>
-#include "show_info.h"
 
 using namespace std;
 
@@ -42,4 +41,4 @@ int main(void) {
 
 
 	return 0;
-}*/
+}
