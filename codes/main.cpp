@@ -24,8 +24,9 @@ using namespace std;
 ///////////////////////////////////////////////////////////////////////
 
 int main(void) {
-	showLine("start");
+	// showLine("start");
+	// showLine("done");
 
-	showLine("done");
+
 	return 0;
 }
