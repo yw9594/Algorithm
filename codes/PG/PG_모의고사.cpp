@@ -40,10 +40,7 @@ int main(void) {
 	// std::istream::sync_with_stdio(false);
 	// cin.tie(NULL);
 	
-	showLine("start");
 	vector<int> ans = solution({1,2,3,4,5});
-	show1dArray(ans);
-	showLine("done");
 
 	return 0;
 }
