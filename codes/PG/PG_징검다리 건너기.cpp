@@ -9,7 +9,6 @@ using namespace std;
 
 // 프로그래머스 사용 시 전역 변수는 반드시 solution 내부에서 초기화 할 것
 
-
 // num보다 작은 돌들이 k번 이상 반복되어선 안된다.
 bool check(vector<int> & stones, int num, int k) {
 	int idx=0, cnt=0;

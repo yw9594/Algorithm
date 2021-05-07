@@ -46,10 +46,10 @@ bool check(int s_i, int s_j, vector<vector<int>>& key, vector<vector<int>>& boar
     for (int k = 0; k < 4; k++) {
         rotate(key);
 
-        try_solve(s_i, s_j, key, board, 1); // ¿­¼è ³¢¿ì±â             
+        try_solve(s_i, s_j, key, board, 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½             
         if (is_unlock(board))
             return true;
-        try_solve(s_i, s_j, key, board, -1); // ¿­¼è »©±â
+        try_solve(s_i, s_j, key, board, -1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     }
     return false;
